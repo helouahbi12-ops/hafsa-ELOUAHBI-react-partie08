@@ -1,20 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import Presentation from "./components/presentation";
-import PresentationClasse from "./components/presentationclasse";
+import { createRoot } from "react-dom/client";
+import Message from "./components/message";
+import CompteurVisites from "./components/CompteurVisites";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
+const root = createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <Presentation>
-      <p>Version fonction : ce texte est passé via props.children</p>
-    </Presentation>
-
+    <Message />
     <hr />
-
-    <PresentationClasse>
-      <p>Version classe : ce texte est passé via this.props.children</p>
-    </PresentationClasse>
+    <CompteurVisites />
   </div>
 );
